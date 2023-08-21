@@ -1,0 +1,71 @@
+:root {
+  --ops-item-height: 100vh;
+  --ops-item-width: 100%;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  position: relative;
+}
+
+.container {
+  max-width: 100%;
+}
+
+.container .ops-container {
+  width: 100%;
+}
+
+.container .ops-container .ops-item {
+  height: var(--ops-item-height);
+  background-size: cover;
+  background-position: center center;
+}
+
+.content{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  gap: 20px;
+}
+
+.ops-navigation-container{
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  height: fit-content;
+  width: fit-content;
+  background-color: blue;
+  padding: 10px;
+}
+
+.ops-navigation-container .ops-navigation{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ops-navigation-container .ops-navigation-item{
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: all 0.5s ease-in-out 0.5;
+}
+
+.ops-navigation-item-active{
+  background-color: red !important;
+}
